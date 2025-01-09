@@ -1,0 +1,41 @@
+.card {
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-background-image: url("assets/interfaz/reversoCarta.png");
+    -fx-background-size: cover;
+}
+
+.card:hover{
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+}
+
+.button{
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+}
+
+.button:hover{
+    -fx-background-color: orange;
+}
+
+.botonExit {
+    -fx-text-fill: white;
+    -fx-background-color:red;
+}
+
+.botonStart{
+    -fx-text-fill: white;
+    -fx-background-color: cadetblue;
+}
+
+.tiempo{
+    -fx-text-fill: red;
+    -fx-font-family: Consolas;
+
+}
+
+.intentos{
+    -fx-text-fill: blue;
+    -fx-font-family: Consolas;
+}

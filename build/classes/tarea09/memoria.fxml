@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tarea09.MemoriaController">
+   <children>
+      <ImageView fx:id="fondo" fitHeight="413.0" fitWidth="678.0" layoutX="-39.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/interfaz/fondo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgMemoryGame" fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/interfaz/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="110.0" styleClass="intentos" text="Intentos:" textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="208.0" styleClass="tiempo" text="Tiempo:" textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="numeroIntentos" layoutX="92.0" layoutY="137.0" styleClass="intentos" text="0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="44.0" />
+         </font>
+      </Label>
+      <Label fx:id="numeroTiempo" layoutX="92.0" layoutY="239.0" styleClass="tiempo" text="0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="44.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonComienza" layoutX="44.0" layoutY="319.0" mnemonicParsing="false" onAction="#reiniciarJuego" styleClass="botonStart" text="Comenzar el juego" />
+      <Button fx:id="botonSalir" layoutX="56.0" layoutY="349.0" mnemonicParsing="false" onAction="#salir" styleClass="botonExit" text="Salir del juego" />
+      <GridPane fx:id="contenedorGrid" alignment="CENTER" layoutX="219.0" layoutY="15.0" prefHeight="367.0" prefWidth="367.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="carta0" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" />
+            <Button fx:id="carta4" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.rowIndex="1" />
+            <Button fx:id="carta8" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.rowIndex="2" />
+            <Button fx:id="carta12" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.rowIndex="3" />
+            <Button fx:id="carta1" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="1" />
+            <Button fx:id="carta5" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="carta9" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="carta13" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="carta2" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="2" />
+            <Button fx:id="carta6" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="carta10" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="carta14" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="carta3" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="3" />
+            <Button fx:id="carta7" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="carta11" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="carta15" mnemonicParsing="false" onAction="#mostrarContenidoCasilla" prefHeight="90.0" prefWidth="92.0" styleClass="card" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
